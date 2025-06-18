@@ -1,0 +1,251 @@
+.header__top {
+    background-image: url(/assets/img/deals.jpg);
+    background-size: cover no-repeat;
+    background-position: center;
+    border-bottom: 1px solid var(--first-color);
+    padding-block: 0.875rem;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__contact span:first-child {
+    margin-right: 2rem;
+}
+
+.header__contact span,
+.header__alert-news,
+.header__top-action {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.header__alert-news {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.header__top-action {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.nav,
+.nav__menu,
+.nav__list,
+.header__user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    height: calc(var(--header-height) + 2.5rem);
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+
+.nav__logo-img {
+    width: 120px;
+}
+
+.nav__menu {
+    flex-grow: 1;
+    margin-left: 2.5rem;
+}
+
+.nav__list {
+    column-gap: 2rem;
+    margin-right: auto;
+}
+
+.nav__link {
+    color: var(--title-color);
+    font-weight: var(--weight-700);
+    transition: all 0.2s var(--transition);
+}
+
+.header__search {
+    width: 340px;
+    position: relative;
+}
+
+.header__search .form__input {
+
+    width: 100%;
+}
+
+.search__btn {
+    position: absolute;
+    top: 24%;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.header__user-actions {
+    column-gap: 1.25rem;
+}
+
+.header__action-btn {
+    position: relative;
+}
+
+.header__action-btn {
+    position: relative;
+}
+
+.header__action-btn img {
+    width: 24px;
+    ;
+}
+
+.header__action-btn .count {
+    position: absolute;
+    top: -0.625rem;
+    right: -0.625rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: var(--tiny-font-size);
+}
+
+.nav__menu-top,
+.nav__toggle {
+    display: none;
+}
+
+.nav__toggle {
+    cursor: pointer;
+}
+
+.active-link,
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.nav__close {
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--body-color);
+    border: 1px solid var(--border-color-alt);
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.title-search {
+    color: var(--first-color);
+    font-weight: var(--weight-600);
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-result-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-result-item:hover {
+    background: #f0f0f0;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__top {
+        display: none;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__logo-img {
+        width: 116px;
+    }
+
+    .nav__menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        max-width: 400px;
+        width: 100%;
+        height: 100%;
+        padding: 1.25rem 2rem;
+        background-color: var(--body-color);
+        z-index: 100;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2rem;
+        box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.1);
+        transition: all 0.25s var(--transition);
+    }
+
+    .show-menu {
+        right: 0;
+    }
+
+    .nav__list {
+        order: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1.5rem;
+    }
+
+    .nav__link {
+        font-size: var(--large-font-size);
+    }
+
+    .header__search .form__input {
+        border-color: var(--first-color);
+    }
+
+    .nav__menu-top,
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__menu-top {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
+
+    .nav__menu-logo img {
+        width: 100px;
+    }
+
+    .nav__close {
+        font-size: var(--h2-font-size);
+        line-height: 1rem;
+    }
+
+    .header__action-btn img {
+        width: 21px;
+    }
+}
